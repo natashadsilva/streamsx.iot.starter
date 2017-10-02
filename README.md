@@ -3,7 +3,7 @@ Starter kit that simplifies setup for IoT development in Streams.
 
 If you are interested in creating a Streaming Analytics application that will process data from IoT devices, this starter kit will create all the needed services and put all the needed credentials in an easily accessible page.
 
-[Sample page](https://streams-iot-starterkit-example.mybluemix.net)
+[Demo page](http://streams-iot-starter.mybluemix.net/)
 
 Deploying this repository will:
 - Create an instance of the Streaming Analytics service and an instance of the Watson IoT Platform
