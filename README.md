@@ -13,4 +13,4 @@ Deploying this repository will:
 
 Click below to get started, or you can manually deploy what you need by following [the steps in this article](https://developer.ibm.com/streamsdev/docs/setup-instructions-connecting-edgent-streams-applications-watson-iot-platform/).
 
-[![Deploy To Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/natashadsilva/streamsx.iot.starter.git)
+[![Deploy To Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/natashadsilva/streamsx.iot.starter.git&branch=test)
