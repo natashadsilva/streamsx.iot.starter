@@ -69,7 +69,7 @@ class Main extends BaseComponent {
       <div>
         <AppBar style={{color: AppTheme.primary1Color}}
           showMenuIconButton={false}
-          title={`Streams IoT Starter Kit`}
+          title={`Streams IoT Starter Kit From Test Branch`}
         />
         <Toolbar>
          <ToolbarGroup firstChild={true}>
