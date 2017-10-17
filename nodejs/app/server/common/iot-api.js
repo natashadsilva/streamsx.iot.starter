@@ -29,7 +29,7 @@ var device_cfg_file = null;
 // }
 function getIotfApiUrl(credential, path, query) {
   // IOTF docs:
-  // https://docs.internetofthings.ibmcloud.com/swagger/v0002.html?cm_mc_uid=43678319775414535003853&cm_mc_sid_50200000=1465224726#/
+  // https://docs.internetofthings.ibmcloud.com/swagger/v0002.html
 
   const v2_path = '/api/v0002';
   return url.format({
