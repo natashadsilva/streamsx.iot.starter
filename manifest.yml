@@ -19,3 +19,6 @@ declared-services:
   Internet-of-Things-Platform:
     label: iotf-service
     plan: iotf-service-free
+  My-Object-Storage:
+    label: Object-Storage
+    plan: Free
