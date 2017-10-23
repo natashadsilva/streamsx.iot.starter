@@ -20,6 +20,7 @@ import Howto from './Howto';
 
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import AppTheme from './style/theme';
+import StreamJobs from './StreamJobs';
 
 import IconButton from 'material-ui/lib/icon-button';
 
@@ -32,6 +33,7 @@ class Main extends BaseComponent {
   constructor(props, context) {
     super(props, context);
     this._bind('showPage','getChildContext');
+    //this varible determines which page will be shown; "StreamsJobs/Welcome, or Settings"
     this.state = {
       current_page: "home"
     };
@@ -58,6 +60,8 @@ class Main extends BaseComponent {
    let bodyElement = <Welcome/>
    if (this.state.current_page === 'credentials') {
      bodyElement = <Settings />;
+   } else if (this.state.current_page === 'tools') {
+      bodyElement = <StreamJobs/>;
    }
 
    const button_style = {
@@ -74,6 +78,8 @@ class Main extends BaseComponent {
         <Toolbar>
          <ToolbarGroup firstChild={true}>
         <FlatButton style={button_style} label="Home" onTouchTap={this.showPage('home')}/>
+        <FlatButton style={button_style}  label="Tools" onTouchTap={this.showPage('tools')}/>
+
        <FlatButton style={button_style}  label="View All Credentials" onTouchTap={this.showPage('credentials')}/>
 </ToolbarGroup>
   </Toolbar>

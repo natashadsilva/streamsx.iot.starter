@@ -41,6 +41,20 @@ const streaming_analytics =
 const iot_platform = {
   };
 
+
+  const streaming_app = [{
+    name: 'com.ibm.streamsx.iot.watson.apps::IotPlatform',
+    file: path.resolve('streamsapp', 'com.ibm.streamsx.iot.watson.apps.IotPlatform.sab'),
+    submit_config: {
+      configurationSettings: {},
+      submissionParameters: {
+        'IotPlatform.org': iot_platform.org,
+        'IotPlatform.authKey': iot_platform.apiKey,
+        'IotPlatform.authToken': iot_platform.apiToken
+      }
+    }
+  }];
+
 // Settings for registerting edge device on IOT platform
 // FILL IN, change any information necessary to setup the edge device
 const edge_device = {
@@ -53,7 +67,7 @@ const edge_device = {
 };
 module.exports = {
   server: server,
-
+  streaming_app: streaming_app,
   edge_device: edge_device,
   streaming_analytics: streaming_analytics,
   iot_platform: iot_platform

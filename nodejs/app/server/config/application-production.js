@@ -42,7 +42,7 @@ const streaming_analytics = vcap_services['streaming-analytics'][0].credentials;
 
 const iot_platform = vcap_services['iotf-service'][0].credentials;
 
-/*const streaming_app = [{
+const streaming_app = [{
   name: 'com.ibm.streamsx.iot.watson.apps::IotPlatform',
   file: path.resolve('streamsapp', 'com.ibm.streamsx.iot.watson.apps.IotPlatform.sab'),
   submit_config: {
@@ -53,8 +53,8 @@ const iot_platform = vcap_services['iotf-service'][0].credentials;
       'IotPlatform.authToken': iot_platform.apiToken
     }
   }
-} ... etc];
-*/
+}];
+
 // Settings for registerting edge device on IOT platform
 const edge_device = {
   type: 'iot_device',
@@ -68,7 +68,7 @@ const edge_device = {
 module.exports = {
   server: server,
   edge_device: edge_device,
-
+ streaming_app: streaming_app,
   streaming_analytics: streaming_analytics,
   iot_platform: iot_platform
 };

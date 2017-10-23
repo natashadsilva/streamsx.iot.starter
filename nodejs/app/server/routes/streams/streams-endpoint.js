@@ -19,7 +19,7 @@ const logger = require.main.require('./app/server/common/logger');
 const utils = require.main.require('./app/server/common/utils');
 const config = require.main.require('./app/server/config/application');
 
-
+endpt.use('/jobs', require('./jobs-endpoint'));
 
 endpt.post('/sacreds', function(req, res, next) {
   if (!config.streaming_analytics ) {

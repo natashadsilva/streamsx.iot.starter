@@ -16,7 +16,8 @@ const httpProxy = require('http-proxy');
 const config = require('./app/server/config/application');
 const server = require('./app/server/server');
 const logger = require('./app/server/common/logger');
-const io = require('socket.io')();
+const io = require('./app/server/routes/socket/io-socket');
+
 const iot = require('./app/server/common/iot-api');
 
 // Setup server initialization logic
