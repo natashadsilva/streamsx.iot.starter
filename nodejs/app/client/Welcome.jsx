@@ -72,16 +72,22 @@ class Welcome extends BaseComponent {
 
         <br/>
 
-        <Table selectable={false}>
+        <Table width="100%" selectable={false}>
 
-          <TableBody displayRowCheckbox={false}>
+       <TableBody displayRowCheckbox={false}>
                 <TableRow>
-                  <TableRowColumn width="50%"> <h3>This short animation shows how data moves from IoT devices to Streams applications.</h3><br/>
+                  <TableRowColumn style={{
+                      whiteSpace: "normal",
+                      wordWrap: "break-word"
+                    }} width="50%"><h3>This short animation shows how data moves from IoT devices to Streams applications.</h3><br/>
                   <video width="600" height="400" controls src="https://developer.ibm.com/streamsdev/wp-content/uploads/sites/15/2017/10/iotanimation-video.mp4" type="video/mp4">
                        Your browser does not support the video tag. <a href="https://developer.ibm.com/streamsdev/wp-content/uploads/sites/15/2017/10/iotanimation-video.mp4">Watch it here.</a>
                   </video>
                   </TableRowColumn>
-                  <TableRowColumn width="50%"><h3>Get Started</h3>
+                  <TableRowColumn style={{
+                      whiteSpace: "normal",
+                      wordWrap: "break-word"
+                    }} width="50%"><h3>Get Started</h3>
                   <p><b>1. Create an Edgent application</b><br/>Follow this recipe to <a href="https://developer.ibm.com/recipes/tutorials/send-events-to-the-watson-iot-platform-from-a-raspberry-pi-running-apache-edgent/">
                                         create an Edgent application that sends data to the Watson IoT platform</a>.
                   </p>
