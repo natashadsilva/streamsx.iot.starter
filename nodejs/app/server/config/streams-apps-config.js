@@ -51,5 +51,16 @@ config.streaming_app = [{
   }
 }];
 
+function makeDeviceToken() {
+  var text = "";
+  var possible = "ABCDEFGHHIstuvwxyz-_123456JKLMNOPQRSTUVWXYZabcdefghijklmnopqr0789";
+
+
+  for (var i = 0; i < 15 ; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+config.edge_device.authtoken = makeDeviceToken();
 
 module.exports = config;

@@ -57,6 +57,7 @@ function getIotJobStatus(status){
     }
   }
   iot_job_status = {"id"  : id, state: status.state, "found": found, "healthy": health, "job_count": status.job_count};
+
   return iot_job_status;
 }
 // Get Jobs that are currently running
@@ -84,6 +85,7 @@ endpt.post('/', function(req, res, next) {
     }
 
     //io.emit('streamjobs', status);
+    logger.info("Sending updated status: " + getIotJobStatus(status));
     io.emit('iotplatformjob', getIotJobStatus(status));
     res.send(status);
   });

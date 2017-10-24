@@ -185,7 +185,7 @@ function deploysab (credential, apps, done) {
     if (done) {
       // Set a countdown timer, so the jobs will stop automatically after an
       // hour
-      timeoutVar = setTimeout(stopJobs, 3600000, credential, apps, null);
+      timeoutVar = setTimeout(doTimeout, 3600000, credential, apps, null);
 
       done(err, result);
     }
@@ -200,6 +200,11 @@ function getRunningJobs (credential, done) {
     err = handleRequestError(err, resp, HttpStatus.OK);
     done(err, body);
   });
+}
+
+function doTimeout(credential, apps, done){
+  logger.info('1 hour time out reached, attempting to stop IoTPlatform job');
+  stopJobs(credential, apps, done);
 }
 
 function stopJobs (credential, apps, done) {
