@@ -63,7 +63,7 @@ class StreamJobs extends BaseComponent {
       if (status == null) {
         self.setState({
           disableActions: true,
-          recentSubmit: false
+
         });
       } else {
         if (status.found && status.healthy){
@@ -106,6 +106,7 @@ class StreamJobs extends BaseComponent {
           message = "The IotPlatform application is starting up. If it remains in this state for a long time, please check the job in the Streams Console.";
         } else if  (!found && this.state.recentSubmit) {
           message = "The IotPlatform application is starting up.";
+          setTimeout(this.refreshJobStatus, 4000);
         } else {
           message = "The IotPlatform application is not currently running in your instance. Click 'Submit Jobs' below to start it.";
         }
@@ -127,7 +128,7 @@ class StreamJobs extends BaseComponent {
           }}
         />
         <CardText>
-        The <code>IotPlatform</code> or <code>IotPlatformBluemix</code> application is a helper application that connects to the Watson IoT Platform.  This job must first be running in your instance before your Streams application can ingest data from IoT devices.  The current status of the application in your instance is displayed below. For convenience, you can submit the application here if it is not running.<br/>Click 'Submit Helper Job' to start the <code>IotPlatform</code> application is not running.
+        The <code>IotPlatform</code> or <code>IotPlatformBluemix</code> application is a helper application that connects to the Watson IoT Platform.  This job must first be running in your instance before your Streams application can ingest data from IoT devices.  The current status of the application in your instance is displayed below. <br/>For your convenience, you can submit the application here if it is not running.<br/>
         </CardText>
         <CardText>{message} </CardText>
         <CardActions>
@@ -144,7 +145,7 @@ class StreamJobs extends BaseComponent {
             onMouseDown={jobButtonAction}
           />
         </CardActions>
-        <CardText><h3>More information</h3>Go to the <a href="https://console.bluemix.net/dashboard/">Bluemix dashboard</a> to launch the Streams Console</CardText>
+        <CardText><h3>More information</h3>Go to the <a target="blank" href="https://console.bluemix.net/dashboard/">Bluemix dashboard</a> to launch the Streams Console.</CardText>
 
       </Card>
     )

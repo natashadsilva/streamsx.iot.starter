@@ -55,21 +55,40 @@ class Welcome extends BaseComponent {
         <div style={header_style}>
         <h1>Welcome to the Streams IoT Starter Kit</h1>
         <h3>Your Streaming Analytics service and Watson IoT Platform services have been set up. You are now ready to create Streams applications to analyze data from edge devices.</h3>
-      </div>  <Card style={button_style}><CardHeader   subtitleColor={AppTheme.cardSubtitleColor}
+      </div>
+      <Card style={button_style}><CardHeader   subtitleColor={AppTheme.cardSubtitleColor}
           style={{backgroundColor:      AppTheme.palette.primary2Color}}
-            titleStyle={{fontSize: 'large'}}  title="Tutorials"
-            subtitle="Step by step tutorials to help you get started"/>
+            titleStyle={{fontSize: 'large'}}  title="How it Works"
+            />
          <CardText>
-        These tutorials give instructions to manually create credentials. These credentials are all accessible by clicking "View Credentials" above.
-        <ul><li>
-        <a href="https://developer.ibm.com/recipes/tutorials/send-events-to-the-watson-iot-platform-from-a-raspberry-pi-running-apache-edgent/">
-        Send events to Watson IoT Platform from Edgent</a>
-        </li><li>
-        <a href="https://developer.ibm.com/recipes/tutorials/connect-apache-edgent-to-the-streaming-analytics-service-using-the-watson-iot-platform/">
-       Connect to Apache Edgent from the Streaming Analytics service
-        </a></li><li>
+        This short animation shows how data moves from IoT devices to Streams applications.
+        <br/>
+
+<video width="600" height="400" controls autoplay source src="https://developer.ibm.com/streamsdev/wp-content/uploads/sites/15/2017/10/iotanimation-video.mp4" type="video/mp4">
+     Your browser does not support the video tag. <a href="https://developer.ibm.com/streamsdev/wp-content/uploads/sites/15/2017/10/iotanimation-video.mp4">Watch it here.</a>
+</video>
+            </CardText></Card>
+
+       <Card style={button_style}><CardHeader   subtitleColor={AppTheme.cardSubtitleColor}
+          style={{backgroundColor:      AppTheme.palette.primary2Color}}
+            titleStyle={{fontSize: 'large'}}  title="Get Started"
+            subtitle="Resources to help you get started"/>
+         <CardText>
+         <h3>Sample Applications</h3>
+
+         <ul><li>Detect malfunctioning weather stations using Streams, Python and the IBM Data Science Experience</li>
+
+         </ul>
+         <h3>Step by Step Tutorials</h3>
+        You could complete these tutorials in order. <br/>Note: These tutorials give instructions to create credentials. These credentials have already been created for you and are accessible by clicking "View Credentials" above.
+        <ol><li><a href="https://developer.ibm.com/recipes/tutorials/send-events-to-the-watson-iot-platform-from-a-raspberry-pi-running-apache-edgent/">
+           Create an Edgent application that sends data to the Watson IoT platform</a>
+        </li><li><a href="https://developer.ibm.com/recipes/tutorials/connect-apache-edgent-to-the-streaming-analytics-service-using-the-watson-iot-platform/">
+      Create a Streams application that processes the data from the Edgent application
+        </a></li>
+      </ol><br/>
         <a href="https://developer.ibm.com/streamsdev/docs/cheat-sheet-connecting-edgent-streams-applications/">Cheatsheet for connecting Edgent and Streams applications</a>
-        </li></ul>
+
 
         <p><a href="https://github.com/IBMStreams/samples/blob/master/IoT/ReadEdgentEvents/">Sample Streams applications on Github</a></p>
         </CardText></Card>

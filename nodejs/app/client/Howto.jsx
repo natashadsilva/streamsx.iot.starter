@@ -60,15 +60,7 @@ class Howto extends BaseComponent {
 
       You need to:
       <ul>
-      <li> Connect to the Watson IoT platform to retreive data from your edge device.  A second set of credentials is required to connect to the Watson IoT platform from Streams. Those credentials have also been generated for you.
-       <br/>
-       <DownloadButton
-            name="watson_iot_auth.txt"
-            label="Download credentials as property file"
-            uri="/api/streams/iotauth"/>
-        <br/>
-      </li>
-      <li> Submit the <code>IotPlatformBluemix</code> application using the credentials from the previous step. <a href="https://developer.ibm.com/streamsdev/docs/setup-instructions-connecting-edgent-streams-applications-watson-iot-platform/">Follow step 4 of this guide.</a>
+      <li> Connect to the Watson IoT platform to retreive data from your edge device. To do this,  launch the <code>IotPlatform</code> application by going to the "Tools" page above.
         </li>
         <li> Create a Streams application using Java, SPL or Python,  <a href="https://developer.ibm.com/streamsdev/docs/cheat-sheet-connecting-edgent-streams-applications/">as documented in this cheat sheet</a>.</li>
 
